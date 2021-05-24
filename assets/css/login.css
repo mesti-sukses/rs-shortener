@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif");
+
+body {
+    background: url("https://imgur.com/VM0LduR.png");
+    padding-top: 50px;
+}
+
+.title {
+    font-family: 'Bree Serif';
+    margin-left: 45px;
+    font-size: 1.8em;
+}
+
+.description {
+    margin-left: 45px;
+    margin-right: 45px;
+    color: #678889;
+    font-size: 0.8em;
+    text-shadow: 1px 1px 0 #fff;
+    margin-bottom: 20px;
+}
+
+#container {
+    width: 300px;
+    height: 350px;
+    background: #f3f3f3;
+    padding-top: 30px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.loginInput {
+    display: block;
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 25px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.loginInput:hover {
+    background-color: #dfe9ec;
+}
+
+.loginInput:focus {
+    -webkit-box-shadow: 0 0 5px #51cbee;
+    box-shadow: 0 0 5px #51cbee;
+    border: 1px solid #51cbee;
+    background-color: #dfe9ec;
+}
+
+.loginInput:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+#footer {
+    position: absolute;
+    top: 285px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #d4dedf;
+    overflow: hidden;
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+
+#register {
+    display: inline;
+    padding-right: 50px;
+    font-family: 'Bree Serif';
+    font-size: 1.2em;
+    text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#register .register {
+    text-decoration: none;
+    color: #000;
+}
+
+#register .register:hover {
+    color: #3f9db8;
+}
+
+#circle {
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    font-family: 'Bree Serif';
+    border-radius: 5px;
+    padding: 5px 15px;
+    background: #56c2e1;
+    border: 1px solid #46b3d3;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#circle:hover {
+    background: #3f9db8;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#anim {
+    display: none;
+    margin: 0;
+}
+
+#anim:checked+#circle {
+    color: transparent;
+    padding-top: 30px;
+    padding-right: 20px;
+    font-size: 0;
+    border-radius: 50%;
+    border-color: #488214;
+    background-color: #bced91;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("//imgur.com/RbhLLwJ.gif");
+}

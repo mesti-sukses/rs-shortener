@@ -4,14 +4,16 @@
 
     $f3 = \Base::instance();
 
-    $f3->route('GET /',
-        function() {
-            echo 'Hello, world!';
-        }
-    );
+    $f3->set('base', 'https://info.ruangseminar.id/');
+    $f3->set('DB', new DB\SQL('sqlite:database/data.db'));
 
-    // URL Shortener
-    $f3->route('GET /hukum-tidak-korupsi', 'Redirect->hukumTidakKorupsi');
+    $f3->route('GET /', 'Tampilan->login');
+    $f3->route('POST /login', 'Input->login');
+    $f3->route('POST /simpan', 'Input->simpan');
+    $f3->route('GET /admin', 'Admin->index');
+    $f3->route('GET /admin/edit/@id', 'Admin->edit');
+    $f3->route('GET /seminar/@slug', 'Tampilan->redirect');
+    $f3->route('GET /logout', 'Admin->logout');
 
     $f3->run();
 ?>
