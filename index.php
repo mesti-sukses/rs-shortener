@@ -7,7 +7,8 @@
     $f3->set('base', 'https://info.ruangseminar.id/');
     $f3->set('DB', new DB\SQL('sqlite:database/data.db'));
 
-    $f3->route('GET /', 'Tampilan->login');
+    $f3->route('GET /', 'Tampilan->info');
+    $f3->route('GET /loginPage', 'Tampilan->login');
     $f3->route('POST /login', 'Input->login');
     $f3->route('POST /simpan', 'Input->simpan');
     $f3->route('GET /admin', 'Admin->index');

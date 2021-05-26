@@ -16,20 +16,24 @@
         <table id="keywords" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
+                    <th><span>Judul</span></th>
                     <th><span>URL</span></th>
-                    <th><span>Redirect</span></th>
+                    <th><span>Statistik</span></th>
                     <th><span>Aksi</span></th>
                 </tr>
             </thead>
             <tbody>
                 <repeat group="{{ @urlData }}" key="{{ @number }}" value="{{ @url }}">
                     <tr>
+                        <td>
+                            {{ @url.judul }}
+                        </td>
                         <td class="lalign">
                             <a href="{{ @base }}seminar/{{ @url.slug }}">
                                 {{ @url.slug }}
                             </a>
                         </td>
-                        <td>{{ @url.url }}</td>
+                        <td>{{ @url.statistik }}</td>
                         <td>
                             <a href="{{ @base }}admin/edit/{{ @url.id }}" class="button">Edit</a>
                             <a href="{{ @base }}admin/delete/{{ @url.id }}" class="button button-danger">Hapus</a>
@@ -52,6 +56,17 @@
                 </false>
             </check>
             <div class="input-field">
+                <p class="input-container">
+                    <check if="{{ isset(@currentData) }}">
+                        <true>
+                            <input name="judul" type="text" id="input-username" class="login-input" value="{{ @currentData[0].judul }}">
+                        </true>
+                        <false>
+                            <input name="judul" type="text" id="input-username" class="login-input">
+                        </false>
+                    </check>
+                    <label for="input-username" unselectable="on">Judul</label>
+                </p>
                 <p class="input-container">
                     <check if="{{ isset(@currentData) }}">
                         <true>

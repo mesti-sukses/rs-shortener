@@ -16,21 +16,26 @@
         <table id="keywords" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
+                    <th><span>Judul</span></th>
                     <th><span>URL</span></th>
-                    <th><span>Redirect</span></th>
+                    <th><span>Statistik</span></th>
                     <th><span>Aksi</span></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach (($urlData?:[]) as $number=>$url): ?>
                     <tr>
+                        <td>
+                            <?= ($url['judul'])."
+" ?>
+                        </td>
                         <td class="lalign">
                             <a href="<?= ($base) ?>seminar/<?= ($url['slug']) ?>">
                                 <?= ($url['slug'])."
 " ?>
                             </a>
                         </td>
-                        <td><?= ($url['url']) ?></td>
+                        <td><?= ($url['statistik']) ?></td>
                         <td>
                             <a href="<?= ($base) ?>admin/edit/<?= ($url['id']) ?>" class="button">Edit</a>
                             <a href="<?= ($base) ?>admin/delete/<?= ($url['id']) ?>" class="button button-danger">Hapus</a>
@@ -53,6 +58,17 @@
                 
             <?php endif; ?>
             <div class="input-field">
+                <p class="input-container">
+                    <?php if (isset($currentData)): ?>
+                        
+                            <input name="judul" type="text" id="input-username" class="login-input" value="<?= ($currentData[0]['judul']) ?>">
+                        
+                        <?php else: ?>
+                            <input name="judul" type="text" id="input-username" class="login-input">
+                        
+                    <?php endif; ?>
+                    <label for="input-username" unselectable="on">Judul</label>
+                </p>
                 <p class="input-container">
                     <?php if (isset($currentData)): ?>
                         
